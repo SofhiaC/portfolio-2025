@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%; /* garante que o body cresça se o conteúdo crescer */
+    font-family: 'Kdam Thmor Pro';
+}
+
+body {
+    background-image: url("./images/background.png");
+    background-size: cover;       /* cobre todo o espaço disponível */
+    background-repeat: no-repeat; /* não repete */
+    background-attachment: fixed; /* mantém o fundo fixo enquanto rola o conteúdo */
+    background-position: center;  /* centraliza a imagem */
+    background-color: #2B2130;    /* cor de fundo caso a imagem não carregue */
+}
+
+header{
+    background-color: #1C112F;
+    margin-top: 40px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+}
+
+header img{
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 20px;
+    height: 100px;
+}
+
+header h2{
+    color: #fff;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+header .btn-navbar{
+    margin-top: 40px;
+}
+
+header button{
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Kdam Thmor Pro';
+}
+
+header a{
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
