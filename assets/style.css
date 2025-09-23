@@ -75,6 +75,423 @@ main{
     margin-bottom: 80px;
 }
 
+.boasvindas {
+    background-color: #000;
+    border: 3px solid #A03BED; /* borda roxa */
+    height: auto;              /* deixa altura flexível */
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;           /* permite quebrar em telas menores */
+    margin: 40px auto;         /* centraliza */
+    border-radius: 40px;
+    justify-content: space-between;
+    padding: 20px 50px;
+    box-shadow: 0 0 15px #A03BED, 
+                0 0 30px #6b22a3, 
+                0 0 45px #3c0864; /* efeito neon */
+}
+
+.boasvindas .texto {
+    color: #A03BED;
+    flex: 1;                   /* ocupa espaço flexível */
+    min-width: 250px;
+    margin-bottom: 20px;
+    margin-right: 200px;
+}
+
+.boasvindas .texto h2 {
+    font-size: 70px;
+    margin: 0 0 10px 0;
+}
+
+.boasvindas .texto p {
+    font-size: 30px;
+    margin: 0;
+}
+
+.boasvindas img {
+    align-self: flex-end;  /* cola no rodapé da div */
+    max-width: 300px;      /* limita largura */
+    height: auto;
+    margin-left: auto;     /* joga a imagem pro lado direito */
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .boasvindas {
+        flex-direction: column;  /* empilha texto e imagem */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .boasvindas .texto {
+        padding: 0;
+    }
+
+    .boasvindas .texto h2 {
+        font-size: 50px;
+    }
+
+    .boasvindas .texto p {
+        font-size: 22px;
+    }
+
+    .boasvindas img {
+        margin: 20px auto 0 auto;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .boasvindas .texto h2 {
+        font-size: 36px;
+    }
+
+    .boasvindas .texto p {
+        font-size: 18px;
+    }
+
+    .boasvindas img {
+        max-width: 150px;
+    }
+}
+
+.intro {
+    color: #fff;
+    display: flex;
+    align-items: center;       /* centraliza verticalmente */
+    justify-content: center;   /* centraliza horizontalmente */
+    font-size: 30px;
+    text-align: center;        /* centraliza o conteúdo dentro do <p> */
+    padding: 20px;             /* opcional, dá espaço interno */
+}
+
+.intro p {
+    max-width: 1000px;  /* largura máxima do parágrafo */
+}
+
+.titulo-tecnologias {
+    text-align: center;       /* centraliza tudo dentro da div */
+    padding: 20px;
+}
+
+.titulo-tecnologias p {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;      /* espaço entre o texto e as imagens */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;        /* centraliza o parágrafo */
+}
+.imagens-tecnologias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.tech-box {
+    background-color: #BCBCBC;   /* fundo roxo */
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.tech-box img {
+    max-width: 80%;   /* mantém proporção da imagem */
+    max-height: 80%;
+    height: auto;
+    width: auto;
+}
+
+.tech-box:hover {
+    transform: scale(1.1);       /* efeito hover */
+}
+
+.projetos {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Linha de projetos */
+.row1, .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Cada retângulo de projeto */
+.projeto1, .projeto2, .projeto3 {
+    display: flex;
+    background-color: #433F51;   /* fundo do retângulo */
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Texto do projeto (lado esquerdo) */
+.projeto1 .texto, 
+.projeto2 .texto, 
+.projeto3 .texto {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.projeto1 h5, .projeto2 h5, .projeto3 h5 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.projeto1 p, .projeto2 p, .projeto3 p {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+}
+
+.projeto1 a, .projeto2 a, .projeto3 a {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.projeto1 a img, .projeto2 a img, .projeto3 a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Imagem do projeto (lado direito) */
+.projeto1 img, .projeto2 img, .projeto3 img {
+    width: 30%;           /* ocupa 30% do retângulo */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .projeto1, .projeto2, .projeto3 {
+        flex-direction: column;  /* empilha imagem abaixo do texto */
+        align-items: center;
+    }
+
+    .projeto1 .texto, .projeto2 .texto, .projeto3 .texto {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .projeto1 img, .projeto2 img, .projeto3 img {
+        width: 80%;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .projetos h3 {
+        font-size: 28px;
+    }
+
+    .projeto1 h5, .projeto2 h5, .projeto3 h5 {
+        font-size: 20px;
+    }
+
+    .projeto1 p, .projeto2 p, .projeto3 p {
+        font-size: 14px;
+    }
+}
+
+
+.desenvolvimento {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.desenvolvimento h3 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Cada projeto ocupa uma linha inteira */
+.desenvolvendo1, .desenvolvendo2 {
+    display: flex;
+    flex-wrap: wrap;           /* para responsividade */
+    background-color: #433F51; /* fundo do retângulo */
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Texto do projeto (lado esquerdo) */
+.desenvolvendo1 .texto, .desenvolvendo2 .texto {
+    flex: 1;                    /* ocupa o espaço disponível */
+    min-width: 250px;
+    margin-right: 20px;
+}
+
+.desenvolvendo1 h5, .desenvolvendo2 h5,
+.desenvolvendo1 p, .desenvolvendo2 p {
+    margin: 0 0 10px 0;
+}
+
+.desenvolvendo1 h5, .desenvolvendo2 h5 {
+    font-size: 24px;
+}
+
+.desenvolvendo1 p, .desenvolvendo2 p {
+    font-size: 16px;
+}
+
+.desenvolvendo1 a, .desenvolvendo2 a {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.desenvolvendo1 a img, .desenvolvendo2 a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Imagem do projeto (lado direito) */
+.desenvolvendo1 img, .desenvolvendo2 img {
+    width: 30%;               /* ocupa 30% do retângulo */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .desenvolvendo1, .desenvolvendo2 {
+        flex-direction: column; /* empilha imagem abaixo do texto */
+        align-items: center;
+    }
+
+    .desenvolvendo1 .texto, .desenvolvendo2 .texto {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .desenvolvendo1 img, .desenvolvendo2 img {
+        width: 80%;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .desenvolvimento h3 {
+        font-size: 28px;
+    }
+
+    .desenvolvendo1 h5, .desenvolvendo2 h5 {
+        font-size: 20px;
+    }
+
+    .desenvolvendo1 p, .desenvolvendo2 p {
+        font-size: 14px;
+    }
+}
+
+.contatos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contatos h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Container para ícones e botões em linha */
+.contatos-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* espaço entre ícones e botões */
+}
+
+/* Container dos links de contato (quadrados) */
+.contatos-links {
+    display: flex;
+    gap: 15px; /* espaço entre os quadrados */
+}
+
+/* Cada quadrado de contato */
+.contatos a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #61519A;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.contatos a img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.contatos a:hover {
+    transform: scale(1.1);
+}
+
+/* Botões sem glow */
+.contatos-botoes button {
+    padding: 12px 20px;
+    font-size: 18px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #A03BED;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+
+/* Responsividade: mantém tudo em linha até telas pequenas */
+@media (max-width: 600px) {
+    .contatos-row {
+        flex-direction: column; /* quebra para coluna em telas bem pequenas */
+        gap: 20px;
+    }
+
+    .contatos a {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 footer {
     width: 100%;
     text-align: center;
