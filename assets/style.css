@@ -6,60 +6,91 @@
 
 html, body {
     width: 100%;
-    min-height: 100%; /* garante que o body cresça se o conteúdo crescer */
+    min-height: 100%;
     font-family: 'Kdam Thmor Pro';
 }
 
 body {
     background-image: url("./images/background.png");
-    background-size: cover;       /* cobre todo o espaço disponível */
-    background-repeat: no-repeat; /* não repete */
-    background-attachment: fixed; /* mantém o fundo fixo enquanto rola o conteúdo */
-    background-position: center;  /* centraliza a imagem */
-    background-color: #2B2130;    /* cor de fundo caso a imagem não carregue */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #2B2130; 
 }
 
-header{
-    background-color: #1C112F;
-    margin-top: 40px;
-    position: fixed;
+
+header {
+    background-color: #180d29;
+    position: fixed;   
+    top: 0;           
+    left: 0;
     width: 100%;
+    display: flex;     
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 40px;
+    z-index: 1000; 
+}
+
+/* grupo da esquerda (gatinho + nome) */
+header img {
+    height: 60px;
+    margin-right: 6%;
+}
+
+header h2 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* agrupa img + nome */
+header > img, 
+header > h2 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* container dos botões */
+header .btn-navbar {
     display: flex;
+    align-items: center;
 }
 
-header img{
-    margin-bottom: 30px;
-    margin-left: 40px;
-    margin-right: 20px;
-    height: 100px;
-}
-
-header h2{
-    color: #fff;
-    margin-top: 40px;
-    font-size: 30px;
-}
-
-header .btn-navbar{
-    margin-top: 40px;
-}
-
-header button{
+header button,
+header a {
     background: none;
     border: none;
     color: #fff;
     cursor: pointer;
-    margin: 10px;
-    font-size: 20px;
-    font-family: 'Kdam Thmor Pro';
-}
-
-header a{
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    margin: 10px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
     text-decoration: none;
-    font-size: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ccc;
+}
+
+footer p {
+  margin: 0; 
+  font-size: 14px;
+  color: #333;
+}
+
+footer img {
+  position: absolute;
+  top: -40px;
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 60px; 
 }
