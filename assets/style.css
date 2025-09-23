@@ -70,15 +70,19 @@ header a {
     text-decoration: none;
 }
 
+main{
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 15px;
-  background-color: #f1f1f1;
-  border-top: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+    position: relative;
+    overflow: visible;
 }
 
 footer p {
@@ -88,9 +92,9 @@ footer p {
 }
 
 footer img {
-  position: absolute;
-  top: -40px;
-  left: 50%; 
-  transform: translateX(-50%);
-  width: 60px; 
+    position: absolute;
+    top: -40px;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 60px; 
 }
